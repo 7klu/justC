@@ -6,7 +6,7 @@
   ├── `Utilise des spécificateurs (%d, %s, etc.).`
   └── **Exemple d'utilisation**:
 
-    ```c
+```c
     <stdio.h>
 
     int main()
@@ -16,4 +16,4 @@
       
       return 0;
     }
-    ```
+```
