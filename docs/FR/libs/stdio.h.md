@@ -1,8 +1,8 @@
 ## `📚` <stdio.h>
 
 ### `⚙️` printf
-  ├── **`Affiche du texte formaté sur la sortie standard.`**  
-  ├── `Utilise des spécificateurs (%d, %s, etc.).`  
+  ├── **`💡 Affiche du texte formaté sur la sortie standard.`**  
+  ├── `🔧 Utilise des spécificateurs (%d, %s, etc.).`  
   └── **Exemple d'utilisation** :
 
 ```c
