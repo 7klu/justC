@@ -16,3 +16,105 @@ int main()
   return 0;
 }
 ```
+
+### `⚙️` fprintf
+
+
+### `⚙️` sprintf
+
+
+### `⚙️` snprintf
+
+
+### `⚙️` scanf
+
+
+### `⚙️` fscanf
+
+
+### `⚙️` sscanf
+
+
+### `⚙️` fopen
+
+
+### `⚙️` freopen
+
+
+### `⚙️` fclose
+
+
+### `⚙️` fgetc
+
+
+### `⚙️` ungetc
+
+
+### `⚙️` getchar
+
+
+### `⚙️` fgets
+
+
+### `⚙️` fputc
+
+
+### `⚙️` putc
+
+
+### `⚙️` putchar
+
+
+### `⚙️` fputs
+
+
+### `⚙️` puts
+
+
+### `⚙️` fread
+
+
+### `⚙️` fwrite
+
+
+### `⚙️` fseek
+
+
+### `⚙️` ftell
+
+
+### `⚙️` rewind
+
+
+### `⚙️` fflush
+
+
+### `⚙️` remove
+
+
+### `⚙️` rename
+
+
+### `⚙️` tmpfile
+
+
+### `⚙️` tmpnam
+
+
+### `⚙️` perror
+
+
+### `⚙️` clearerr
+
+
+### `⚙️` feof
+
+
+### `⚙️` ferror
+
+
+### `⚙️` setvbuf
+
+
+### `⚙️` setbuf
+
