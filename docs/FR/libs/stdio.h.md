@@ -1,19 +1,18 @@
 ## `📚` <stdio.h>
 
-# `⚙️` printf
+### `⚙️` printf
   │
-  ├── **`Affiche du texte formaté sur la sortie standard.`**
-  ├── `Utilise des spécificateurs (%d, %s, etc.).`
-  └── **Exemple d'utilisation**:
+  ├── **`Affiche du texte formaté sur la sortie standard.`**  
+  ├── **`Utilise des spécificateurs (%d, %s, etc.).`**  
+  └── **Exemple d'utilisation** :
 
 ```c
-    <stdio.h>
+#include <stdio.h>
 
-    int main()
-    {
-      char* string = "Hello World !";
-      printf("Message: %s", string);
-      
-      return 0;
-    }
-```
+int main()
+{
+  char* string = "Hello World !";
+  printf("Message: %s", string);
+  
+  return 0;
+}
