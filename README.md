@@ -6,4 +6,4 @@
 [![Stars](https://img.shields.io/github/stars/7klu/justC?style=for-the-badge)](https://github.com/7klu/justC/stargazers)
 [![Forks](https://img.shields.io/github/forks/7klu/justC?style=for-the-badge)](https://github.com/7klu/justC/network/members)
 [![Issues](https://img.shields.io/github/issues/7klu/justC.svg?style=for-the-badge)](https://github.com/7klu/justC/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/7klu/justC.svg?style=for-the-badge)](https://github.com/7klu/justC/pulls)s
+[![Pull Requests](https://img.shields.io/github/issues-pr/7klu/justC.svg?style=for-the-badge)](https://github.com/7klu/justC/pulls)
