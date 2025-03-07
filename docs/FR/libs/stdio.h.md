@@ -234,9 +234,29 @@ int main()
 ```
 
 ### `⚙️` fgetc
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Lit un caractère depuis un fichier.`**  
+  ├── `🔧 Retourne un int pour gérer EOF.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char ligne[256];
+
+    FILE *fichier = fopen("fichier.txt", "r");
+    
+    while(fgets(ligne, sizeof(ligne), fichier))
+    {
+        printf("%s", ligne);
+    }
+
+    fclose(fichier);
+
+    return 0;
+}
+```
 
 ### `⚙️` ungetc
   ├── **`💡`**  
