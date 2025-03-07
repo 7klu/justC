@@ -183,21 +183,37 @@ int main()
 
 int main()
 {
-    *FILE fichier;
+    FILE *fichier;
     
     fichier = fopen("file.txt", "w");  // Ouvre le fichier en mode écriture
 
-    fprintf(fichier, "Hello World !"); // Écrit dans le fichier
-    fclose(fichier);                   // Ferme le fichier
+    fprintf(fichier, "Hello World !"); 
+    fclose(fichier);                   
 
     return 0;
 }
 ```
 
 ### `⚙️` freopen
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Rouvre un fichier en redirigeant un flux existant.`**  
+  ├── `🔧 Utile pour rediriger stdin, stdout, etc.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    freopen("output.txt", "w", stdout); // Redirige la sortie standard vers "output.txt"
+
+    printf("Hello, World!\n"); // Au lieu d'afficher dans la console, affiche dans "output.txt"
+
+    fclose(stdout);
+
+    return 0;
+}
+```
+
 
 ### `⚙️` fclose
   ├── **`💡`**  
