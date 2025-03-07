@@ -152,9 +152,26 @@ int main()
 ```
 
 ### `⚙️` sscanf
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Lit des entrées formatées depuis une chaîne.`**  
+  ├── `🔧 Transforme une char* en valeurs formatées.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char* maChaine = "Chaine 1238";
+
+    char  chaine[100];
+    int   nombre;
+
+    sscanf(maChaine, "%s %d"                , chaine, &nombre ); // On récupère la chaine de caractères et le nombre
+    printf("Ma chaine: %s\nMon nombre: %d\n", chaine,  nombre );
+
+    return 0;
+}
+```
 
 ### `⚙️` fopen
   ├── **`💡`**  
