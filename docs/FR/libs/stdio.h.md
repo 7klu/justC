@@ -10,8 +10,8 @@
 
 int main()
 {
-  char* chaine = "Hello World !";
-  printf("Message: %s", chaine);
+  char* chaine = "Hello World !"; // Crée une chaine de caractères
+  printf("Message: %s", chaine);  // Affiche la chaine de caractères là où ce trouve "%s" (formatage)
   
   return 0;
 }
