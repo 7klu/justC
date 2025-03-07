@@ -233,9 +233,9 @@ int main()
 }
 ```
 
-### `⚙️` fgetc
-  ├── **`💡 Lit un caractère depuis un fichier.`**  
-  ├── `🔧 Retourne un int pour gérer EOF.`  
+### `⚙️` fgets
+  ├── **`💡 Lit une ligne depuis un fichier.`**  
+  ├── `🔧 Évite le dépassement de tampon.`  
   └── **Exemple d'utilisation** :
 
 ```c
@@ -258,17 +258,38 @@ int main()
 }
 ```
 
-### `⚙️` ungetc
-  ├── **`💡`**  
-  ├── `🔧`  
+### `⚙️` fgetc
+  ├── **`💡 Lit un caractère depuis un fichier.`**  
+  ├── `🔧 Retourne un int pour gérer EOF.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int caractere;
+    FILE *fichier = fopen("fichier.txt", "r");
+
+    while((caractere = fgetc(fichier)) != EOF) // Tant que le caractère n'est pas la fin du fichier (EOF) 
+    {                                          // EOF = End Of File (Fin du fichier)
+        putchar(caractere);
+    }
+
+    return 0;
+}
+```
+
+### `⚙️` ungetc
+  ├── **`💡 Remet un caractère dans le flux d’entrée.`**  
+  ├── `🔧 Permet de "revenir en arrière" dans un flux.`  
+  └── **Exemple d'utilisation** :
+
+```c
+SOON
+```
 
 ### `⚙️` getchar
-  ├── **`💡`**  
-  ├── `🔧`  
-  └── **Exemple d'utilisation** :
-
-### `⚙️` fgets
   ├── **`💡`**  
   ├── `🔧`  
   └── **Exemple d'utilisation** :
