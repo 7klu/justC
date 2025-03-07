@@ -44,9 +44,28 @@ int main()
 ```
 
 ### `⚙️` sprintf
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit du texte formaté dans une chaîne.`**  
+  ├── `🔧  Risque de dépassement de tampon, préférer snprintf`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+
+    char tableau[100]; // crée un tableau de 100 caractères
+    
+    char* chaine = "Hello World !";
+    int   entier = 42;
+    float reel   = 3.14;
+
+    sprintf(tableau, "Chaine: %s\nEntier: %d\nRéel: %f", chaine, entier, reel); // Formate les données dans le tableau
+    printf("%s\n", tableau);                                                    // Affiche le tableau
+
+    return 0;
+}
+```
 
 ### `⚙️` snprintf
   ├── **`💡`**  
