@@ -15,7 +15,7 @@ int main()
   
   return 0;
 }
-```
+```  
 
 ### `⚙️` fprintf
   ├── **`💡 Écrit du texte formaté dans un fichier.`**  
@@ -41,11 +41,11 @@ int main()
 
     return 0;
 }
-```
+```  
 
 ### `⚙️` sprintf
   ├── **`💡 Écrit du texte formaté dans une chaîne.`**  
-  ├── `🔧  Risque de dépassement de tampon, préférer snprintf`  
+  ├── `🔧  Risque de dépassement de tampon (préférer snprintf)`  
   └── **Exemple d'utilisation** :
 
 ```c
@@ -54,23 +54,52 @@ int main()
 int main()
 {
 
-    char tableau[100]; // crée un tableau de 100 caractères
+    char tampon[100]; // Buffer (zone mémoire temporaire)
     
     char* chaine = "Hello World !";
     int   entier = 42;
     float reel   = 3.14;
 
-    sprintf(tableau, "Chaine: %s\nEntier: %d\nRéel: %f", chaine, entier, reel); // Formate les données dans le tableau
-    printf("%s\n", tableau);                                                    // Affiche le tableau
+    sprintf(tampon, "Chaine: %s\nEntier: %d\nRéel: %f", chaine, entier, reel); // Ecrit dans le tampon la chaine de caractères formatée
+    printf("%s\n", tampon);                                                    // Affiche la chaine de caractères contenue dans le tampon
 
     return 0;
 }
-```
+```  
 
 ### `⚙️` snprintf
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit du texte formaté dans une chaîne avec limite de taille.`**  
+  ├── `🔧 Plus sécurisé que sprintf car il limite l'écriture à la taille du buffer (grâce à sizeof(buffer) )`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+
+    char tampon[100]; // Buffer (zone mémoire temporaire)
+    
+    char* chaine = "Hello World !";
+    int   entier = 42;
+    float reel   = 3.14;
+
+    int tailleBuffer; // Permet de stocker la taille du tampon
+
+    tailleBuffer = snprintf(tampon, sizeof(tampon), "Chaine: %s\nEntier: %d\nRéel: %f", chaine, entier, reel); // sizeof(tampon) = limite de 100 caractères
+
+    // Si la taille du tampon est supérieure ou égale à la taille du tampon
+    if (tailleBuffer >= sizeof(tampon))
+    {
+        printf("Erreur: Buffer overflow\n"); // Dépassement de tampon
+        return 1;
+    }
+
+    printf("%s\n", tampon);
+
+    return 0;
+}
+```  
 
 ### `⚙️` scanf
   ├── **`💡`**  
