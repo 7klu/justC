@@ -102,9 +102,25 @@ int main()
 ```  
 
 ### `⚙️` scanf
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Lit des entrées formatées depuis la saisie standard.`**  
+  ├── `🔧 Peut causer des erreurs si mal utilisé.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char message[256];
+
+    printf("Entrez votre message: ");
+    scanf("%255s", message);                              // Scan le message entré par l'utilisateur et le stocke dans la variable message
+
+    printf("Affichage du message entré: %s\n", message); // Affiche le message entré par l'utilisateur
+
+    return 0;
+}
+```  
 
 ### `⚙️` fscanf
   ├── **`💡`**  
