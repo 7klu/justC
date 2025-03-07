@@ -10,8 +10,8 @@
 
 int main()
 {
-  char* string = "Hello World !";
-  printf("Message: %s", string);
+  char* chaine = "Hello World !";
+  printf("Message: %s", chaine);
   
   return 0;
 }
