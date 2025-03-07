@@ -18,10 +18,27 @@ int main()
 ```
 
 ### `⚙️` fprintf
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit du texte formaté dans un fichier.`**  
+  ├── `🔧 Prend un FILE* en premier argument.`  
   └── **Exemple d'utilisation** :
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    FILE *fichier = fopen ("fichier.txt", "W");
+
+    fprintf( fichier, "Hello World !" );
+    fclose ( fichier                  );
+
+    /*           |> Standard Output
+        fprintf(stdout, "Hello, World!\n");   // équivalent à printf
+    */
+
+    return 0;
+}
+```
 
 ### `⚙️` sprintf
   ├── **`💡`**  
