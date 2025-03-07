@@ -166,7 +166,7 @@ int main()
     char  chaine[100];
     int   nombre;
 
-    sscanf(maChaine, "%s %d"                , chaine, &nombre ); // On récupère la chaine de caractères et le nombre
+    sscanf(maChaine, "%s %d"                , chaine, &nombre ); // On récupère la chaine de caractères et le nombre de la chaine "maChaine"
     printf("Ma chaine: %s\nMon nombre: %d\n", chaine,  nombre );
 
     return 0;
@@ -174,9 +174,25 @@ int main()
 ```
 
 ### `⚙️` fopen
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Ouvre un fichier et retourne un pointeur FILE*`**  
+  ├── `🔧 Modes : "r" (lecture), "w" (écriture), "a" (ajout), "r+" (lecture et écriture), "w+" (lecture et écriture), "a+" (ajout et lecture)  `  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    *FILE fichier;
+    
+    fichier = fopen("file.txt", "w");  // Ouvre le fichier en mode écriture
+
+    fprintf(fichier, "Hello World !"); // Écrit dans le fichier
+    fclose(fichier);                   // Ferme le fichier
+
+    return 0;
+}
+```
 
 ### `⚙️` freopen
   ├── **`💡`**  
