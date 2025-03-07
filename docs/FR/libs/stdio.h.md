@@ -33,7 +33,10 @@ int main()
     fclose ( fichier                  );
 
     /*           |> Standard Output
-        fprintf(stdout, "Hello, World!\n");   // équivalent à printf
+        fprintf( stdout, "Hello World!\n"     ); // équivalent à printf
+        fprintf( stderr, "Sortie d'erreur \n" ); // équivalent à perror
+                 |> Standard Error
+        
     */
 
     return 0;
