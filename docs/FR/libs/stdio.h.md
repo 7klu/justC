@@ -123,9 +123,33 @@ int main()
 ```  
 
 ### `⚙️` fscanf
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Lit des entrées formatées depuis un fichier.`**  
+  ├── `🔧 Similaire à scanf mais pour les fichiers.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    // CONTENU DE "message.txt": "Hello, World! 1984"
+
+    FILE *fichier = fopen("message.txt", "r"); // Ouverture du fichier en mode lecture
+    char message[256];                         // Tableau de caractères pour stocker le message
+    int  entier;
+
+    printf("Recherche du message dans le fichier message.txt...\n");
+ 
+    fscanf(fichier, "%s", message);                           // Lecture de la première chaîne de caractères du fichier ("Hello,")
+    fscanf(fichier, "%d", &entier);                           // Lecture de l'entier suivant (1984)
+    
+    printf("Message lu: %s\nEntier lu: %d", message, entier); // Affichage du message et de l'entier
+
+    fclose(fichier); // Fermeture du fichier
+
+    return 0;
+}
+```
 
 ### `⚙️` sscanf
   ├── **`💡`**  
