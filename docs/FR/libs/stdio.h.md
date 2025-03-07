@@ -206,7 +206,7 @@ int main()
 {
     freopen("output.txt", "w", stdout); // Redirige la sortie standard vers "output.txt"
 
-    printf("Hello, World!\n"); // Au lieu d'afficher dans la console, affiche dans "output.txt"
+    printf("Hello, World!\n");          // Au lieu d'afficher dans la console, affiche dans "output.txt"
 
     fclose(stdout);
 
@@ -216,9 +216,22 @@ int main()
 
 
 ### `⚙️` fclose
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Ferme un fichier ouvert.`**  
+  ├── `🔧 Nécessaire pour éviter les fuites mémoire.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    FILE *fichier = fopen("fichier_à_fermer.txt", "w");
+
+    fclose(fichier); // Ferme le fichier ouvert (ici, fichier_à_fermer.txt)
+
+    return 0;
+}
+```
 
 ### `⚙️` fgetc
   ├── **`💡`**  
