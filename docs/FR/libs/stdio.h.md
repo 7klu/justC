@@ -286,17 +286,51 @@ int main()
   └── **Exemple d'utilisation** :
 
 ```c
-SOON
+#include <stdio.h>
+
+int main()
+{
+    char caractere;
+
+    printf("Entré un caractère: ");
+    caractere = getchar();                            // On lit un caractère entré par l'utilisateur
+    
+    printf("Le caractère entré est: %c", caractere);
+
+    ungetc(stdin, caractere);                         // On remet le caractère dans le flux d'entrée
+
+    caractere = getchar();                            // On peut lire à nouveau le caractère
+    printf("Le caractère relu est: %c", caractere);
+
+    return 0;
+}
 ```
 
 ### `⚙️` getchar
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Lit un caractère depuis stdin.`**  
+  ├── `🔧 Identique à getc(stdin)`  
   └── **Exemple d'utilisation** :
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    char caractere;
+
+    printf("Entré un caractère: ");
+    caractere = getchar();                            // On lit un caractère entré par l'utilisateur
+
+    printf("Le caractère entré est: %c", caractere);  // On affiche le caractère entré
+
+    return 0;
+}
+```
+  
+
 ### `⚙️` fputc
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 `**  
+  ├── `🔧 `  
   └── **Exemple d'utilisation** :
 
 ### `⚙️` putc
