@@ -384,14 +384,42 @@ int main()
 ```
 
 ### `⚙️` fputs
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit une chaîne dans un fichier.`**  
+  ├── `🔧 Ne rajoute pas automatiquement de \n`  
   └── **Exemple d'utilisation** :
 
+```c
+#include <stdio.h>
+
+int main()
+{
+
+    FILE *fichier = fopen("fichier.txt", "w");
+
+    fputs("Bonjour", fichier); // Ecriture dans le fichier "Bonjour"
+
+    fclose(fichier);
+ 
+    return 0;
+}
+```
+
 ### `⚙️` puts
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit une chaîne sur stdout avec \n automatique.`**  
+  ├── `🔧 Plus sûr que printf("%s\n", str)`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+
+    puts("Puts ne prend en paramètre qu'une chaîne de caractères et ajoute automatiquement un retour à la ligne à la fin de la chaîne.");
+    
+    return 0;
+}
+```
 
 ### `⚙️` fread
   ├── **`💡`**  
