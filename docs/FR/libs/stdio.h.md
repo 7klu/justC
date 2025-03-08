@@ -329,19 +329,59 @@ int main()
   
 
 ### `⚙️` fputc
-  ├── **`💡 `**  
-  ├── `🔧 `  
+  ├── **`💡 Écrit un caractère dans un fichier.`**  
+  ├── `🔧 Retourne le caractère écrit ou EOF.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+
+    FILE *fichier = fopen("fichier.txt", "w");
+
+    fputc('H', fichier); // Écriture d'un caractère dans le fichier "fichier.txt"
+    fclose(fichier);
+
+    fputc('H', stdout); // Écriture d'un caractère dans la sortie standard
+
+    return 0;
+}
+```
 
 ### `⚙️` putc
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Similaire à fputc, peut être une macro.`**  
+  ├── `🔧 Moins sécurisé que fputc`  
   └── **Exemple d'utilisation** :
 
+```c
+#include <stdio.h>
+
+int main()
+{
+    putc('H', stdout); // La même chose que fputc
+
+    return 0;
+}
+```
+
 ### `⚙️` putchar
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit un caractère sur stdout.`**  
+  ├── `🔧 Identique à putc(c, stdout)`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    char caractere = 'A';
+    putchar(caractere);
+ 
+    return 0;
+}
+```
 
 ### `⚙️` fputs
   ├── **`💡`**  
