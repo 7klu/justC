@@ -476,9 +476,53 @@ int main() {
 ```
 
 ### `⚙️` fseek
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Déplace la position de lecture/écriture dans un fichier.`**  
+  ├── `🔧 Modes: "SEEK_SET", "SEEK_CUR", "SEEK_END".`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *fichier = fopen("fichier.txt", "r");
+    char buffer[50];
+
+    if (fichier == NULL) {
+        perror("Erreur d'ouverture du fichier");
+        return 1;
+    }
+
+    // 1. Utilisation de SEEK_SET: Déplace le curseur à la 10ème position (index 9)
+    fseek(fichier, 9, SEEK_SET);
+    fgets(buffer, sizeof(buffer), fichier);
+    printf("SEEK_SET - Texte à partir de la 10ème position: %s\n", buffer);
+
+    // 2. Utilisation de SEEK_CUR: Déplace le curseur de 5 positions supplémentaires à partir de la position actuelle
+    fseek(fichier, 5, SEEK_CUR);
+    fgets(buffer, sizeof(buffer), fichier);
+    printf("SEEK_CUR - Texte à partir de la position actuelle après déplacement: %s\n", buffer);
+
+    // 3. Utilisation de SEEK_END: Déplace le curseur à 10 positions avant la fin du fichier
+    fseek(fichier, -10, SEEK_END);
+    fgets(buffer, sizeof(buffer), fichier);
+    printf("SEEK_END - Texte à partir de 10 caractères avant la fin: %s\n", buffer);
+
+    // Ferme le fichier
+    fclose(fichier);
+
+    // TEXTE DE fichier.txt: Bonjours, ceci est un exemple pour expliquer la fonctions fseek de la lib stdio.h :)
+    
+    /*
+    RÉSULTAT ATTENDU:
+
+    SEEK_SET - Texte à partir de la 10ème position:  ceci est un exemple pour expliquer la fonctions 
+    SEEK_CUR - Texte à partir de la position actuelle après déplacement:  de la lib stdio.h :)
+    SEEK_END - Texte à partir de 10 caractères avant la fin: stdio.h :)
+    */
+
+    return 0;
+}
+```
 
 ### `⚙️` ftell
   ├── **`💡`**  
