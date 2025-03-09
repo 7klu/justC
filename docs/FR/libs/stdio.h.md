@@ -422,14 +422,58 @@ int main()
 ```
 
 ### `⚙️` fread
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Lit un bloc de données binaires depuis un fichier.`**  
+  ├── `🔧 Utilisé pour des fichiers non-textes.`  
   └── **Exemple d'utilisation** :
 
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *fichier = fopen("fichier.bin", "rb");              // Ouvre en mode lecture binaire
+
+    if (fichier == NULL) {
+        printf("Erreur d'ouverture du fichier\n");
+        return 1;
+    }
+
+    int donnee;
+    size_t result = fread(&donnee, sizeof(int), 1, fichier); // Lit un entier du fichier
+    // |> Taille de l'objet mémoire à lire
+
+    if (result != 1) {
+        printf("Erreur de lecture\n");
+    } else {
+        printf("Donnée lue : %d\n", donnee);                 // Affiche la donnée lue (voir l'exemple fwrite (donnée lu: 12345))
+    }
+
+    fclose(fichier);                                         // Ferme le fichier
+    return 0;
+}
+```
+
 ### `⚙️` fwrite
-  ├── **`💡`**  
-  ├── `🔧`  
+  ├── **`💡 Écrit un bloc de données binaires dans un fichier.`**  
+  ├── `🔧  Similaire à fread, mais en écriture.`  
   └── **Exemple d'utilisation** :
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *fichier = fopen("fichier.bin", "wb");              // Ouvre le fichier en mode écriture binaire
+    
+    if (fichier == NULL) {
+        printf("Erreur d'ouverture du fichier\n");
+        return 1;
+    }
+
+    int donnee = 12345;                                      // Valeur à écrire
+    fwrite(&donnee, sizeof(int), 1, fichier);                // Écrit l'entier dans le fichier
+
+    fclose(fichier);                                         // Ferme le fichier
+    printf("Donnée écrite dans fichier.bin: %d\n", donnee); // Affiche la valeur écrite (s'affiche comme ça dans le fichier.bin: 90
+```
 
 ### `⚙️` fseek
   ├── **`💡`**  
